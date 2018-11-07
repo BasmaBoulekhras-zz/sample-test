@@ -21,10 +21,10 @@ switch (namespace){
    
  default:  
    // Create namespace if it doesn't exist
-          //sh("kubectl get ns ${env.BRANCH_NAME} || kubectl create ns ${env.BRANCH_NAME}")
-          // Don't use public load balancing for development branches
-          //sh("sed -i.bak 's#gcr.io/green-dispatch-219519/sample-app:v1#${imageTag}#' ./k8s/dev/*.yaml")  
-          //sh("kubectl --namespace=${env.BRANCH_NAME} apply -f k8s/dev/")
+          sh("kubectl get ns ${env.BRANCH_NAME} || kubectl create ns ${env.BRANCH_NAME}")
+          Don't use public load balancing for development branches
+          sh("sed -i.bak 's#gcr.io/green-dispatch-219519/sample-app:v1#${imageTag}#' ./k8s/dev/*.yaml")  
+          sh("kubectl --namespace=${env.BRANCH_NAME} apply -f k8s/dev/")
           
    break       
 }    
