@@ -4,7 +4,7 @@ def call() {
 
 	 withSonarQubeEnv('jenkins') {
                     // Optionally use a Maven environment you've configured already
-                    withMaven(maven:'Maven 3.5') {
+                    withMaven(maven:'maven:3.5') {
                         sh 'mvn clean package sonar:sonar'
                     }
          }
