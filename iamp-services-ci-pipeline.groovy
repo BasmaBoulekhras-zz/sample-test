@@ -1,4 +1,4 @@
-@Library('jenkins-pipeline-library')
+/*@Library('jenkins-pipeline-library')
 import hudson.model.*
 pipeline {
 	agent { node { label 'maven' } }
@@ -180,4 +180,10 @@ pipeline {
             slackBuildResult()
         }
     }
+}*/ 
+
+#!/usr/bin/groovy
+
+def call() {
+	sh "echo hello world"
 }
