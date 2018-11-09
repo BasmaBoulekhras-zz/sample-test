@@ -2,7 +2,7 @@
 
 def call(namespace) {
  
- def project = 'green-dispatch-219519'
+ def project = 'daas-demo'
  def  appName = 'sample-app'
  def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
